@@ -1,0 +1,17 @@
+.information ul {
+  @include list-reset;
+
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 30px;
+  row-gap: 30px;
+  margin: 112px 375px 50px 375px;
+}
+
+.information li {
+  background-color: $white;
+  width: 570px;
+  border: 1px solid $grey;
+  border-left: 3px solid $light-blue;
+  box-sizing: border-box;
+}
