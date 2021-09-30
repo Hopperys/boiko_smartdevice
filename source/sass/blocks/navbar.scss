@@ -25,6 +25,19 @@
   font-family: "PT Mono", "Courier New", monospace;
   line-height: 18px;
   margin-top: 15px;
+
+  &:hover,
+  &:focus {
+    color: $gold;
+
+    > svg {
+      fill: $gold;
+    }
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .navbar__links a:not(.navbar__order) {
@@ -47,9 +60,15 @@
   box-sizing: border-box;
   border-radius: 5px;
   margin-bottom: 8px;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $gold;
+  }
 }
 
 .navbar svg {
   vertical-align: middle;
   margin-right: 10px;
+  fill: $light-blue;
 }

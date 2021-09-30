@@ -1,0 +1,149 @@
+.form {
+  &--main {
+    display: grid;
+    max-width: 570px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content 45px;
+    column-gap: 30px;
+    row-gap: 30px;
+    margin-left: 50.7%;
+    padding-bottom: 113px;
+  }
+}
+
+.form input {
+  border: none;
+  background-color: rgba($white, 0.1);
+  padding: 18px 0 18px 20px;
+  margin-top: 36px;
+  width: 250px;
+
+  &::placeholder {
+    color: $white;
+    font-family: "PT Mono", "Courier New", monospace;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid $gold;
+    padding: 17px 0 17px 18px;
+  }
+}
+
+.form textarea {
+  resize: none;
+  border: none;
+  background-color: rgba($white, 0.1);
+  width: 550px;
+  height: 139px;
+  grid-column: 1/-1;
+  padding-top: 13px;
+  padding-left: 18px;
+  margin-top: 9px;
+  margin-bottom: 13px;
+
+  &::placeholder {
+    color: $white;
+    font-family: "PT Mono", "Courier New", monospace;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &:focus,
+  &:hover {
+    border: 1px solid $gold;
+    width: 548px;
+    height: 137px;
+  }
+}
+
+.form .form__checkbox {
+  @include visually-hidden;
+
+  margin-top: 0;
+  width: auto;
+}
+
+.form__checkbox + .form__label {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $white;
+    box-sizing: border-box;
+    left: -30px;
+    top: 1px;
+  }
+
+  &:focus,
+  &:hover {
+    &::before {
+      border: 1px solid $gold;
+    }
+  }
+
+  &:active {
+    &::before {
+      opacity: 0.7;
+    }
+  }
+}
+
+.form__checkbox:checked + .form__label {
+  &::before {
+    background: url("../img/checked.svg") no-repeat;
+    background-position: center center;
+  }
+}
+
+.form__label {
+  max-width: 230px;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: "PT Mono", "Courier New", monospace;
+  cursor: pointer;
+  margin-left: 40px;
+  margin-top: 8px;
+
+  &:focus,
+  &:hover {
+    color: $gold;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.form__submit {
+  grid-column: 1/2;
+  grid-row: 3;
+  width: 270px;
+  border: 1px solid $white;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $white;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+
+  &:focus,
+  &:hover {
+    border: 1px solid $gold;
+    color: $gold;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}

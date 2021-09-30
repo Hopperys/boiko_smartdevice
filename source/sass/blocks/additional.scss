@@ -45,4 +45,14 @@
   font-weight: 700;
   padding: 17px 46px 19px 44px;
   margin: 22px 0 275px 98px;
+
+  &:hover,
+  &:focus {
+    background-color: $gold;
+    color: $dark-blue;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }

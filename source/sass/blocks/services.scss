@@ -1,0 +1,91 @@
+.services {
+  background-color: $dark-blue;
+}
+
+.services__wrapper {
+  margin-left: 19.55%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+  max-width: 1170px;
+}
+
+.services h2 {
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: 400;
+  color: $white;
+  padding-top: 89px;
+  margin-left: 19.55%;
+  margin-bottom: 51px;
+}
+
+.services a {
+  display: inline-block;
+  width: 326px;
+  height: 570px;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 30px;
+  color: $white;
+  padding-top: 50px;
+  padding-left: 44px;
+  position: relative;
+  margin-bottom: 127px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 370px;
+    height: 620px;
+    background-color: rgba($color: $dark-blue, $alpha: 0.8);
+    z-index: 1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 63px;
+    height: 63px;
+    background: url("../img/arrow.svg") no-repeat;
+    background-position: center center;
+    background-color: $light-blue;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+  }
+
+  &:focus,
+  &:hover {
+    &::after {
+      background-color: $gold;
+    }
+
+    > span {
+      color: $gold;
+    }
+  }
+}
+
+.services span {
+  position: relative;
+  z-index: 10;
+}
+
+.services a:nth-of-type(3n-2) {
+  background: url("../img/link.png") no-repeat;
+  background-color: $dark-blue;
+  position: relative;
+}
+
+.services a:nth-of-type(3n-1) {
+  background: url("../img/link_two.png") no-repeat;
+  background-color: $dark-blue;
+}
+
+.services a:nth-of-type(3n) {
+  background: url("../img/link_three.png") no-repeat;
+  background-color: $dark-blue;
+}

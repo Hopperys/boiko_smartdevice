@@ -63,33 +63,47 @@
             <use xlink:href="img/sprite_auto.svg#icon-hat"></use>
           </svg>
           <h3>Полная конфиденциальность</h3>
-          <p>По желанию клиента  мы обеспечиваем полную конфеденциальность.</p>
+          <p>По желанию клиента&ensp; мы обеспечиваем полную конфеденциальность.</p>
         </li>
         <li>
           <svg width="35" height="35">
             <use xlink:href="img/sprite_auto.svg#icon-tag"></use>
           </svg>
           <h3>Персонализация стоимости</h3>
-          <p>Мы  подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
+          <p>Мы &ensp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
         </li>
       </ul>
-    </section>
-    <section class="about">
-      <h2>О компании</h2>
-      <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
-      <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
-      <a href="">Подробнее</a>
+      <div class="information__additional">
+        <h2>О компании</h2>
+        <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
+        <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
+        <a href="">Подробнее</a>
+      </div>
     </section>
     <section class="services">
       <h2>Service Device предлагает следующие товары и услуги</h2>
-      <a href="">Производство печатных плат</a>
-      <a href="">Монтаж печатных плат</a>
-      <a href="">Комплектующие для светотехники</a>
+      <div class="services__wrapper">
+        <a href="">
+          <span>
+            Производство<br>печатных плат
+          </span>
+        </a>
+        <a href="">
+          <span>
+            Монтаж печатных<br>плат
+          </span>
+        </a>
+        <a href="">
+          <span>
+            Комплектующие<br>для светотехники
+          </span>
+        </a>
+      </div>
     </section>
     <section class="feedback">
       <h2>Остались вопросы? Задайте их нам!</h2>
       <p>Мы проконсультируем Вас бесплатно</p>
-      <form class="form" action="https://echo.htmlacademy.ru/" method="POST" target="_blank">
+      <form class="form form--main" action="https://echo.htmlacademy.ru/" method="POST" target="_blank">
         <label>
           <input type="text" placeholder="Имя" name="name" id="name" required>
         </label>
@@ -97,8 +111,10 @@
           <input type="tel" placeholder="Телефон" name="phone" id="phone" pattern="\+?[0-9\s\-\(\)]+" minlength="11" maxlength="20" required>
         </label>
         <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
-        <label class="filter-text checkbox-label">
-          <input class="visually-hidden" type="checkbox" name="agreement" id="agreement" required checked>
+        <!-- form__checkbox для стилизации чекбоксов -->
+        <input class="form__checkbox" type="checkbox" name="agreement" id="agreement" required checked>
+        <!-- form__label для стилизации чекбоксов -->
+        <label class="form__label" for="agreement">
           Я согласен на обработку персональных данных
         </label>
         <button class="form__submit" type="submit">Задать вопрос</button>
@@ -106,8 +122,28 @@
     </section>
   </main>
   <footer class="page-footer">
-    <img src="img/footer_logo.svg" alt="Логотип сайта">
-    <div class="page-footer__chapters">
+    <section class="page-footer__socials">
+      <img src="img/footer_logo.svg" alt="Логотип сайта">
+      <div class="page-footer__links">
+        <!-- экспортировал svg вместе с фоном т.к. у vk нет оддельного вектора без него -->
+        <a href="https://www.facebook.com/">
+          <svg width="27" height="27">
+            <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
+          </svg>
+        </a>
+        <a href="https://ok.ru/">
+          <svg width="26" height="26">
+            <use xlink:href="img/sprite_auto.svg#icon-ok"></use>
+          </svg>
+        </a>
+        <a href="https://vk.com/">
+          <svg width="27" height="26">
+            <use xlink:href="img/sprite_auto.svg#icon-vk"></use>
+          </svg>
+        </a>
+      </div>
+    </section>
+    <section class="page-footer__chapters">
       <h2>Разделы сайта</h2>
       <ul>
         <li>
@@ -122,18 +158,20 @@
           <a href="">Контакты</a>
         </li>
       </ul>
-    </div>
-    <div class="page-footer__contacts">
+    </section>
+    <section class="page-footer__contacts">
       <h2>Наш офис</h2>
       <p>г. Мытищи, Олимпийский проспект, д.10</p>
       <a href="tel:+74955894050">+7 (495) 589-40-50</a>
       <a href="tel:+79250038767">+7 (925) 003-87-67</a>
       <a href="tel:+792692608079">+7 (926) 926-080-79</a>
-    </div>
-    <p>Все права защищены</p>
-    <small>1999-2018 SD Service Devices</small>
-    <a class="page-footer__confidential" href="#">Условия конфиденциальности</a>
-    <a class="page-footer__studio" href="#">Developed by wow studio</a>
+    </section>
+    <ul class="page-footer__additional">
+      <li>Все права защищены</li>
+      <li>1999-2018 SD Service Devices</p>
+      <li><a class="page-footer__confidential" href="#">Условия конфиденциальности</a></li>
+      <li><a class="page-footer__studio">Developed by wow studio</a></li>
+    </ul>
   </footer>
 </body>
 </html>

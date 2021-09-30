@@ -1,0 +1,20 @@
+.feedback {
+  background: url("../img/background_feedback.png") no-repeat, url("../img/triangle_feedback.svg") no-repeat, url("../img/triangle_feedback_left.svg") no-repeat;
+  background-color: $light-blue;
+  background-position: 175px -60px, 1577px 287px, 1642px 42px;
+  color: $white;
+}
+
+.feedback h2 {
+  font-size: 36px;
+  line-height: 51px;
+  padding-top: 90px;
+  font-weight: 400;
+  margin: 0 0 0 50.57%;
+}
+
+.feedback p {
+  font-family: "PT Mono", "Courier New", monospace;
+  margin-left: 50.75%;
+  margin-top: 10px;
+}

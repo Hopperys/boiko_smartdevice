@@ -1,3 +1,9 @@
+.information {
+  background: url("../img/triangle.svg") no-repeat, url("../img/triangle_big.svg") no-repeat, url("../img/triangle_big_left.svg") no-repeat;
+  background-position: 1557px 285px, 560px 36px, 0 330px;
+  background-size: auto, 872px, 580px;
+}
+
 .information ul {
   @include list-reset;
 
@@ -5,7 +11,9 @@
   grid-template-columns: auto auto;
   column-gap: 30px;
   row-gap: 30px;
-  margin: 112px 375px 50px 375px;
+  margin: 112px 0 0 375px;
+  max-width: 1170px;
+  padding-bottom: 72px;
 }
 
 .information li {
@@ -14,4 +22,107 @@
   border: 1px solid $grey;
   border-left: 3px solid $light-blue;
   box-sizing: border-box;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $light-blue;
+    border: 1px solid $light-blue;
+    border-left: 3px solid $light-blue;
+  }
+}
+
+.information h3 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 34px;
+  color: $light-blue;
+  margin: 12px 0 0 40px;
+}
+
+.information p {
+  max-width: 482px;
+  margin-left: 40px;
+  font-family: "PT Mono", "Courier New", monospace;
+  color: $dark-grey;
+  margin-bottom: 66px;
+}
+
+.information li:nth-of-type(4n-1) {
+  padding-bottom: 48px;
+}
+
+.information svg {
+  margin-top: 41px;
+  margin-left: 45px;
+  fill: $light-blue;
+}
+
+.information li:hover > svg,
+.information li:focus > svg {
+    fill: $white;
+}
+
+.information li:hover > h3,
+.information li:hover > p,
+.information li:focus > h3,
+.information li:focus > p {
+  color: $white;
+}
+
+.information__additional {
+  margin-left: 29.1%;
+  position: relative;
+  padding-bottom: 81px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 317px;
+    background: url("../img/year.png") no-repeat;
+    left: -209px;
+    top: 6px;
+  }
+}
+
+.information__additional h2 {
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: 400;
+  color: $dark-grey;
+  margin-bottom: 22px;
+}
+
+.information__additional p {
+  margin-left: 0;
+  max-width: 984px;
+  margin-bottom: 20px;
+}
+
+.information__additional a {
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: $light-blue;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 20px;
+  padding: 14px 52px 11px 50px;
+  border: 1px solid $light-blue;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $gold;
+    color: $dark-blue;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
