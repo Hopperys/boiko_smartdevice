@@ -2,6 +2,12 @@
   background: url("../img/triangle.svg") no-repeat, url("../img/triangle_big.svg") no-repeat, url("../img/triangle_big_left.svg") no-repeat;
   background-position: 1557px 285px, 560px 36px, 0 330px;
   background-size: auto, 872px, 580px;
+
+  @media (max-width: $tablet) {
+    background: url("../img/triangle_big.svg") no-repeat;
+    background-position: 210px 34px;
+    background-size: auto;
+  }
 }
 
 .information ul {
@@ -14,6 +20,37 @@
   margin: 112px 0 0 375px;
   max-width: 1170px;
   padding-bottom: 72px;
+
+  @media (max-width: 1800px) {
+    margin-left: 19.5%;
+  }
+
+  @media (max-width: 1650px) {
+    margin-left: 15%;
+  }
+
+  @media (max-width: 1460px) {
+    margin-left: 10%;
+  }
+
+  @media (max-width: 1350px) {
+    margin-left: 5%;
+    padding-bottom: 22px;
+  }
+
+  @media (max-width: 1270px) {
+    margin-left: 2.5%;
+    column-gap: 20px;
+    grid-template-columns: 470px 470px;
+  }
+
+  @media (max-width: $tablet) {
+    column-gap: 30px;
+    grid-template-columns: 345px 345px;
+    margin-left: 3.25%;
+    margin-top: 55px;
+    padding-bottom: 30px;
+  }
 }
 
 .information li {
@@ -30,6 +67,14 @@
     border: 1px solid $light-blue;
     border-left: 3px solid $light-blue;
   }
+
+  @media (max-width: 1270px) {
+    width: 470px;
+  }
+
+  @media (max-width: $tablet) {
+    width: 345px;
+  }
 }
 
 .information h3 {
@@ -38,6 +83,10 @@
   line-height: 34px;
   color: $light-blue;
   margin: 12px 0 0 40px;
+
+  @media (max-width: $tablet) {
+    margin: 2px 0 0 23px;
+  }
 }
 
 .information p {
@@ -46,16 +95,34 @@
   font-family: "PT Mono", "Courier New", monospace;
   color: $dark-grey;
   margin-bottom: 66px;
+
+  @media (max-width: $tablet) {
+    margin: 10px 0 20px 22px;
+    max-width: 290px;
+  }
 }
 
 .information li:nth-of-type(4n-1) {
   padding-bottom: 48px;
+
+  @media (max-width: $tablet) {
+    padding-bottom: 30px;
+
+    > p {
+      margin-top: 20px;
+    }
+  }
 }
 
 .information svg {
   margin-top: 41px;
   margin-left: 45px;
   fill: $light-blue;
+
+  @media (max-width: $tablet) {
+    margin-top: 20px;
+    margin-left: 22px;
+  }
 }
 
 .information li:hover > svg,
@@ -84,6 +151,31 @@
     left: -209px;
     top: 6px;
   }
+
+  @media (max-width: 1650px) {
+    margin-left: 30%;
+  }
+
+  @media (max-width: 1430px) {
+    margin-left: 25%;
+  }
+
+  @media (max-width: 1330px) {
+    margin-left: 20%;
+  }
+
+  @media (max-width: $tablet) {
+    margin-left: 27.35%;
+    padding-bottom: 57px;
+
+    &::before {
+      width: 251px;
+      height: 362px;
+      background: url("../img/year_tablet.png") no-repeat;
+      left: -209px;
+      top: -2px;
+    }
+  }
 }
 
 .information__additional h2 {
@@ -92,12 +184,32 @@
   font-weight: 400;
   color: $dark-grey;
   margin-bottom: 22px;
+
+  @media (max-width: $tablet) {
+    font-size: 32px;
+    line-height: 45px;
+    margin-bottom: 24px;
+  }
 }
 
 .information__additional p {
   margin-left: 0;
   max-width: 984px;
   margin-bottom: 20px;
+
+  @media (max-width: 1164px) {
+    width: 750px;
+  }
+
+  @media (max-width: $tablet) {
+    max-width: 532px;
+    height: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
 }
 
 .information__additional a {

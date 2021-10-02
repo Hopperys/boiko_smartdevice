@@ -3,6 +3,10 @@
   background-color: $light-blue;
   background-position: 175px -60px, 1577px 287px, 1642px 42px;
   color: $white;
+
+  @media (max-width: 1275px) {
+    background: $light-blue;
+  }
 }
 
 .feedback h2 {
@@ -11,10 +15,30 @@
   padding-top: 90px;
   font-weight: 400;
   margin: 0 0 0 50.57%;
+
+  @media (max-width: 1275px) {
+    margin-left: 25%;
+  }
+
+  @media (max-width: $tablet) {
+    margin-left: 11.5%;
+    font-size: 32px;
+    line-height: 45px;
+    padding-top: 80px;
+  }
 }
 
 .feedback p {
   font-family: "PT Mono", "Courier New", monospace;
   margin-left: 50.75%;
   margin-top: 10px;
+
+  @media (max-width: 1275px) {
+    margin-left: 25%;
+  }
+
+  @media (max-width: $tablet) {
+    margin-left: 12%;
+    margin-top: 16px;
+  }
 }

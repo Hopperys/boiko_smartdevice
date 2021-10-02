@@ -1,6 +1,10 @@
 .additional {
   margin-left: 13.1%;
   color: $white;
+
+  @media (max-width: 1023px) {
+    margin-left: 11.71%;
+  }
 }
 
 .additional h1 {
@@ -11,6 +15,13 @@
   letter-spacing: 0.07em;
   margin-top: 224px;
   margin-bottom: 27px;
+
+  @media (max-width: $tablet) {
+    font-size: 60px;
+    line-height: 70px;
+    max-width: 325px;
+    margin-top: 110px;
+  }
 }
 
 .additional p {
@@ -29,6 +40,18 @@
     position: absolute;
     left: -94px;
     top: 17px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 356px;
+    margin-left: 50px;
+
+    &::before {
+      width: 33px;
+      left: -50px;
+    }
   }
 }
 
@@ -54,5 +77,11 @@
 
   &:active {
     opacity: 0.5;
+  }
+
+  @media (max-width: $tablet) {
+    margin: 40px 0 162px 50px;
+    padding-left: 30px;
+    padding-right: 33px;
   }
 }

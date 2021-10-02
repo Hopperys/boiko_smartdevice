@@ -8,6 +8,16 @@
     row-gap: 30px;
     margin-left: 50.7%;
     padding-bottom: 113px;
+
+    @media (max-width: 1275px) {
+      margin-left: 25%;
+    }
+
+    @media (max-width: $tablet) {
+      max-width: 590px;
+      margin-left: 12%;
+      padding-bottom: 104px;
+    }
   }
 }
 
@@ -29,6 +39,11 @@
   &:focus {
     border: 1px solid $gold;
     padding: 17px 0 17px 18px;
+  }
+
+  @media (max-width: $tablet) {
+    width: 260px;
+    margin-top: 38px;
   }
 }
 
@@ -56,6 +71,13 @@
     border: 1px solid $gold;
     width: 548px;
     height: 137px;
+  }
+
+  @media (max-width: $tablet) {
+    margin-top: 12px;
+    width: 571px;
+    height: 145px;
+    margin-bottom: 15px;
   }
 }
 
@@ -145,5 +167,9 @@
 
   &:active {
     opacity: 0.7;
+  }
+
+  @media (max-width: $tablet) {
+    width: 280px;
   }
 }

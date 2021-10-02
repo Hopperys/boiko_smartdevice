@@ -2,10 +2,27 @@
   display: flex;
   max-width: 1411px;
   margin-left: 13.3%;
+
+  @media (max-width: 1190px) {
+    margin-left: 5%;
+  }
+
+  @media (max-width: 1050px) {
+    margin-left: 3%;
+  }
+
+  @media (max-width: $tablet) {
+    margin-left: 25px;
+    justify-content: space-between;
+  }
 }
 
 .navbar__logo {
   margin-top: 33px;
+
+  @media (max-width: $tablet) {
+    margin-top: 20px;
+  }
 }
 
 .navbar__links {
@@ -16,6 +33,26 @@
   justify-content: space-between;
   margin-top: 22px;
   margin-left: 39%;
+
+  @media (max-width: 1650px) {
+    margin-left: 30%;
+  }
+
+  @media (max-width: 1500px) {
+    margin-left: 20%;
+  }
+
+  @media (max-width: 1375px) {
+    margin-left: 5%;
+  }
+
+  @media (max-width: $tablet) {
+    margin-left: 0;
+    display: flex;
+    width: auto;
+    margin-right: 3.25%;
+    margin-top: 5px;
+  }
 }
 
 .navbar__links a {
@@ -40,6 +77,12 @@
   }
 }
 
+.navbar__links span {
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+
 .navbar__links a:not(.navbar__order) {
   margin-top: 28px;
 }
@@ -48,7 +91,7 @@
   margin-left: 32px;
 }
 
-.navbar__order {
+.navbar__links .navbar__order {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
@@ -65,10 +108,32 @@
   &:focus {
     border: 1px solid $gold;
   }
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
 }
 
 .navbar svg {
   vertical-align: middle;
   margin-right: 10px;
   fill: $light-blue;
+
+  @media (max-width: $tablet) {
+    margin-right: 0;
+  }
+}
+
+.navbar__mail svg {
+  @media (max-width: $tablet) {
+    width: 25px;
+    height: 19px;
+  }
+}
+
+.navbar__phone svg {
+  @media (max-width: $tablet) {
+    width: 24px;
+    height: 24px;
+  }
 }

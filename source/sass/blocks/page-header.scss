@@ -3,4 +3,11 @@
   background-position: 1030px 118px, center;
   background-color: $dark-blue;
   background-size: auto, cover;
+
+  @media (max-width: $tablet) {
+    background: url("../img/background_additional_tablet.png") no-repeat, url("../img/background.png") no-repeat;
+    background-position: 440px -2px, center;
+    background-color: $dark-blue;
+    background-size: auto, cover;
+  }
 }
