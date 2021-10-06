@@ -25,6 +25,7 @@
     display: flex;
     flex-direction: column;
     padding-bottom: 32px;
+    margin-left: 0;
   }
 }
 
@@ -50,17 +51,34 @@
   }
 
   @media (max-width: $tablet) {
-    margin-left: 3.25%;
     max-width: 613px;
     padding-top: 51px;
     font-size: 32px;
     line-height: 45px;
     margin-bottom: 48px;
+    margin-left: 15%;
+  }
+
+  @media (max-width: 900px) {
+    margin-left: 10%;
+  }
+
+  @media (max-width: 810px) {
+    margin-left: 3.25%;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 28px;
+    line-height: 39px;
+    margin-top: 8px;
+    margin-left: 25px;
+    margin-bottom: 40px;
   }
 }
 
 .services a {
   display: inline-block;
+  vertical-align: middle;
   width: 326px;
   height: 570px;
   text-decoration: none;
@@ -111,7 +129,7 @@
     width: 260px;
     height: 540px;
 
-    &::before{
+    &::before {
       width: 304px;
       height: 590px;
     }
@@ -121,7 +139,8 @@
     width: 675px;
     height: 216px;
     margin-bottom: 46px;
-    margin-left: 11px;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 40px;
 
     &::before {
@@ -131,12 +150,18 @@
       z-index: 1;
     }
   }
-}
 
-.services a:nth-of-type(3n) {
-  @media (max-width: $tablet) {
-    padding-top: 50px;
-    height: 206px;
+  @media (max-width: $mobile) {
+    width: 255px;
+    height: 235px;
+    padding-top: 21px;
+    padding-left: 35px;
+    margin-bottom: 31px;
+
+    &::before {
+      width: 290px;
+      height: 256px;
+    }
   }
 }
 
@@ -150,8 +175,27 @@
   background-color: $dark-blue;
   position: relative;
 
+  @media (min-resolution: 2dppx) {
+    background: url("../img/link@2x.png") no-repeat;
+    background-color: $dark-blue;
+  }
+
   @media (max-width: $tablet) {
     background: url("../img/link_tablet.png") no-repeat $dark-blue;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/link_tablet@2x.png") no-repeat;
+      background-color: $dark-blue;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    background: url("../img/link_mobile.png") no-repeat $dark-blue;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/link_mobile@2x.png") no-repeat;
+      background-color: $dark-blue;
+    }
   }
 }
 
@@ -159,8 +203,27 @@
   background: url("../img/link_two.png") no-repeat;
   background-color: $dark-blue;
 
+  @media (min-resolution: 2dppx) {
+    background: url("../img/link_two@2x.png") no-repeat;
+    background-color: $dark-blue;
+  }
+
   @media (max-width: $tablet) {
     background: url("../img/link_two_tablet.png") no-repeat $dark-blue;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/link_two_tablet@2x.png") no-repeat;
+      background-color: $dark-blue;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    background: url("../img/link_two_mobile.png") no-repeat $dark-blue;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/link_two_mobile@2x.png") no-repeat;
+      background-color: $dark-blue;
+    }
   }
 }
 
@@ -168,7 +231,30 @@
   background: url("../img/link_three.png") no-repeat;
   background-color: $dark-blue;
 
+  @media (min-resolution: 2dppx) {
+    background: url("../img/link_three@2x.png") no-repeat;
+    background-color: $dark-blue;
+  }
+
   @media (max-width: $tablet) {
     background: url("../img/link_three_tablet.png") no-repeat $dark-blue;
+    padding-top: 50px;
+    height: 206px;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/link_three_tablet@2x.png") no-repeat;
+      background-color: $dark-blue;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    padding-top: 30px;
+    height: 226px;
+    background: url("../img/link_three_mobile.png") no-repeat $dark-blue;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/link_three_mobile@2x.png") no-repeat;
+      background-color: $dark-blue;
+    }
   }
 }

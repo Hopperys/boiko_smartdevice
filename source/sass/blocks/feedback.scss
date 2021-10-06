@@ -4,6 +4,13 @@
   background-position: 175px -60px, 1577px 287px, 1642px 42px;
   color: $white;
 
+  @media (min-resolution: 2dppx) {
+    background: url("../img/background_feedback@2x.png") no-repeat, url("../img/triangle_feedback.svg") no-repeat, url("../img/triangle_feedback_left.svg") no-repeat;
+    background-color: $light-blue;
+    background-size: 686px, auto, auto;
+    background-position: 175px -60px, 1577px 287px, 1642px 42px;
+  }
+
   @media (max-width: 1275px) {
     background: $light-blue;
   }
@@ -21,10 +28,26 @@
   }
 
   @media (max-width: $tablet) {
-    margin-left: 11.5%;
+    margin-left: 20%;
     font-size: 32px;
     line-height: 45px;
     padding-top: 80px;
+  }
+
+  @media (max-width: 800px) {
+    margin-left: 11.5%;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 28px;
+    line-height: 39px;
+    padding-top: 30px;
+    text-align: center;
+  }
+
+  @media (max-width: 400px) {
+    margin-left: 15px;
+    text-align: left;
   }
 }
 
@@ -38,7 +61,21 @@
   }
 
   @media (max-width: $tablet) {
-    margin-left: 12%;
+    margin-left: 20%;
     margin-top: 16px;
+  }
+
+  @media (max-width: 800px) {
+    margin-left: 12%;
+  }
+
+  @media (max-width: $mobile) {
+    text-align: center;
+    margin-top: 13px;
+  }
+
+  @media (max-width: 400px) {
+    margin-left: 15px;
+    text-align: left;
   }
 }
