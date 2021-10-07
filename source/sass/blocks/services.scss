@@ -27,6 +27,10 @@
     padding-bottom: 32px;
     margin-left: 0;
   }
+
+  @media (max-width: $mobile) {
+    padding-bottom: 35px;
+  }
 }
 
 .services h2 {
@@ -79,14 +83,12 @@
 .services a {
   display: inline-block;
   vertical-align: middle;
-  width: 326px;
-  height: 570px;
   text-decoration: none;
+  width: 370px;
+  height: 620px;
   font-size: 20px;
   line-height: 30px;
   color: $white;
-  padding-top: 50px;
-  padding-left: 44px;
   position: relative;
   margin-bottom: 127px;
 
@@ -136,12 +138,12 @@
   }
 
   @media (max-width: $tablet) {
-    width: 675px;
-    height: 216px;
+    display: block;
+    width: 720px;
+    height: 256px;
     margin-bottom: 46px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 40px;
 
     &::before {
       width: 720px;
@@ -152,109 +154,74 @@
   }
 
   @media (max-width: $mobile) {
-    width: 255px;
-    height: 235px;
-    padding-top: 21px;
-    padding-left: 35px;
-    margin-bottom: 31px;
+    width: 80%;
+    height: 256px;
+    margin-bottom: 30px;
 
     &::before {
-      width: 290px;
+      width: 100%;
       height: 256px;
     }
+  }
+
+  @media (max-width: 370px) {
+    width: 290px;
+  }
+}
+
+.services img {
+  width: 370px;
+  height: 620px;
+
+  @media (max-width: 1262px) {
+    width: 260px;
+    height: 540px;
+  }
+
+  @media (max-width: $tablet) {
+    width: 720px;
+    height: 256px;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+    height: 256px;
+  }
+
+  @media (max-width: 370px) {
+    width: 290px;
   }
 }
 
 .services span {
+  display: inline-block;
+  vertical-align: middle;
   position: relative;
   z-index: 10;
-}
+  transform: translateY(-577px);
+  margin-left: 45px;
 
-.services a:nth-of-type(3n-2) {
-  background: url("../img/link.png") no-repeat;
-  background-color: $dark-blue;
-  position: relative;
-
-  @media (min-resolution: 2dppx) {
-    background: url("../img/link@2x.png") no-repeat;
-    background-color: $dark-blue;
+  @media (max-width: 1262px) {
+    transform: translateY(-507px);
+    margin-left: 30px;
   }
 
   @media (max-width: $tablet) {
-    background: url("../img/link_tablet.png") no-repeat $dark-blue;
-
-    @media (min-resolution: 2dppx) {
-      background: url("../img/link_tablet@2x.png") no-repeat;
-      background-color: $dark-blue;
-    }
+    transform: translateY(-225px);
+    margin-left: 45px;
   }
 
   @media (max-width: $mobile) {
-    background: url("../img/link_mobile.png") no-repeat $dark-blue;
-
-    @media (min-resolution: 2dppx) {
-      background: url("../img/link_mobile@2x.png") no-repeat;
-      background-color: $dark-blue;
-    }
+    transform: translate(-10px, -242px);
   }
 }
 
-.services a:nth-of-type(3n-1) {
-  background: url("../img/link_two.png") no-repeat;
-  background-color: $dark-blue;
-
-  @media (min-resolution: 2dppx) {
-    background: url("../img/link_two@2x.png") no-repeat;
-    background-color: $dark-blue;
-  }
-
+.services a:nth-of-type(3n) span {
   @media (max-width: $tablet) {
-    background: url("../img/link_two_tablet.png") no-repeat $dark-blue;
-
-    @media (min-resolution: 2dppx) {
-      background: url("../img/link_two_tablet@2x.png") no-repeat;
-      background-color: $dark-blue;
-    }
+    transform: translateY(-212px);
   }
 
   @media (max-width: $mobile) {
-    background: url("../img/link_two_mobile.png") no-repeat $dark-blue;
-
-    @media (min-resolution: 2dppx) {
-      background: url("../img/link_two_mobile@2x.png") no-repeat;
-      background-color: $dark-blue;
-    }
-  }
-}
-
-.services a:nth-of-type(3n) {
-  background: url("../img/link_three.png") no-repeat;
-  background-color: $dark-blue;
-
-  @media (min-resolution: 2dppx) {
-    background: url("../img/link_three@2x.png") no-repeat;
-    background-color: $dark-blue;
-  }
-
-  @media (max-width: $tablet) {
-    background: url("../img/link_three_tablet.png") no-repeat $dark-blue;
-    padding-top: 50px;
-    height: 206px;
-
-    @media (min-resolution: 2dppx) {
-      background: url("../img/link_three_tablet@2x.png") no-repeat;
-      background-color: $dark-blue;
-    }
-  }
-
-  @media (max-width: $mobile) {
-    padding-top: 30px;
-    height: 226px;
-    background: url("../img/link_three_mobile.png") no-repeat $dark-blue;
-
-    @media (min-resolution: 2dppx) {
-      background: url("../img/link_three_mobile@2x.png") no-repeat;
-      background-color: $dark-blue;
-    }
+    transform: translate(-10px, -232px);
   }
 }

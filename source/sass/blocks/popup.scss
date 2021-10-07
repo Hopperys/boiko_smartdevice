@@ -2,8 +2,9 @@
   background-color: $light-blue;
   width: 450px;
   position: fixed;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 50%;
+  margin-right: -50%;
+  transform: translateX(-50%);
   margin-top: 136px;
   padding-left: 40px;
   padding-bottom: 38px;
@@ -20,6 +21,17 @@
   &--opened {
     display: flex;
     flex-direction: column;
+  }
+
+  @media (max-height: 740px) {
+    margin-top: 50px;
+    height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  @media (max-height: 500px) {
+    height: 350px;
   }
 }
 
@@ -43,11 +55,13 @@
 
 .popup__close {
   position: absolute;
-  top: 20px;
-  left: 453px;
+  top: 0;
+  left: 433px;
   width: 17px;
   height: 17px;
   background: url("../img/close.svg") no-repeat;
+  background-position: center center;
   cursor: pointer;
   border: none;
+  padding: 30px;
 }

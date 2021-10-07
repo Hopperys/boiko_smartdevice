@@ -28,7 +28,7 @@
       flex-direction: column;
       margin-left: 4.7%;
       row-gap: 20px;
-      padding-bottom: 41px;
+      padding-bottom: 44px;
     }
   }
 
@@ -42,9 +42,13 @@
 .form input {
   border: none;
   background-color: rgba($white, 0.1);
-  padding: 18px 0 18px 20px;
+  padding: 0 0 0 20px;
   margin-top: 36px;
   width: 250px;
+  height: 50px;
+  border-radius: 0;
+  line-height: 50px;
+  overflow-y: visible;
 
   &::placeholder {
     color: $white;
@@ -56,7 +60,8 @@
   &:hover,
   &:focus {
     border: 1px solid $gold;
-    padding: 17px 0 17px 18px;
+    padding: 0 0 0 18px;
+    height: 48px;
   }
 
   @media (max-width: $tablet) {
@@ -99,6 +104,7 @@
   padding-left: 18px;
   margin-top: 9px;
   margin-bottom: 13px;
+  border-radius: 0;
 
   &::placeholder {
     color: $white;
@@ -174,11 +180,13 @@
   @media (max-width: $tablet) {
     left: 320px;
     top: 345px;
+    z-index: -1;
   }
 
   @media (max-width: $mobile) {
     left: 0;
     top: 390px;
+    opacity: 0;
   }
 }
 

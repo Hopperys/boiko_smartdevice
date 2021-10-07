@@ -60,9 +60,11 @@
 
   @media (max-width: $mobile) {
     display: flex;
+    width: 100%;
     flex-direction: column;
-    width: 290px;
     margin-top: 36px;
+    row-gap: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -72,7 +74,6 @@
   border: 1px solid $grey;
   border-left: 3px solid $light-blue;
   box-sizing: border-box;
-  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -90,6 +91,13 @@
   }
 
   @media (max-width: $mobile) {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 370px) {
     width: 290px;
   }
 }
@@ -126,14 +134,24 @@
 
   @media (max-width: $mobile) {
     margin: 10px 0 20px 22px;
+    max-width: 95%;
+  }
+
+  @media (max-width: 370px) {
     max-width: 249px;
   }
 }
 
 .information li:nth-of-type(4n-2) {
   @media (max-width: $mobile) {
-    margin-bottom: -2px;
+    > p {
+      max-width: 95%;
+      margin-top: 5px;
+      margin-bottom: 30px;
+    }
+  }
 
+  @media (max-width: 370px) {
     > p {
       max-width: 260px;
       margin-top: 5px;
@@ -170,6 +188,7 @@
 .information li:not(:first-of-type) {
   @media (max-width: $mobile) {
     margin-top: -7px;
+    margin-bottom: 30px;
   }
 }
 
@@ -277,7 +296,7 @@
   @media (max-width: $mobile) {
     font-size: 28px;
     line-height: 39px;
-    margin-top: 29px;
+    margin-top: 26px;
     margin-bottom: 10px;
   }
 }
@@ -321,10 +340,10 @@
   }
 }
 
-.information__additional a {
+.information__additional button {
   display: inline-block;
   vertical-align: middle;
-  text-decoration: none;
+  background-color: $white;
   font-size: 14px;
   line-height: 16px;
   font-weight: 700;
@@ -332,7 +351,8 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-top: 20px;
-  padding: 14px 52px 11px 50px;
+  width: 180px;
+  height: 45px;
   border: 1px solid $light-blue;
   box-sizing: border-box;
   border-radius: 5px;

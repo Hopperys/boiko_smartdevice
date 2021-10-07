@@ -1,10 +1,13 @@
 'use strict';
 
 (function () {
-  if (document.contains(document.querySelector('.chapters')) && document.contains(document.querySelector('.contacts'))) {
+  var chapters = document.querySelector('.chapters');
+  var contacts = document.querySelector('.contacts');
+
+  if (document.contains(chapters) && document.contains(contacts)) {
     var footer = document.querySelector('.page-footer');
-    var chapters = document.querySelector('.chapters');
-    var contacts = document.querySelector('.contacts');
+    var chaptersHeader = document.querySelector('.chapters h2');
+    var contactsHeader = document.querySelector('.contacts h2');
 
     chapters.classList.remove('chapters--nojs');
     chapters.classList.add('chapters--closed');
@@ -22,27 +25,39 @@
       footer.classList.toggle('page-footer--opened');
     };
 
+    var checkWindowSize = function () {
+      if (window.innerWidth <= 767) {
+        chaptersHeader.setAttribute('tabIndex', '0');
+        contactsHeader.setAttribute('tabIndex', '0');
+      } else {
+        chaptersHeader.setAttribute('tabIndex', '-1');
+        contactsHeader.setAttribute('tabIndex', '-1');
+      }
+    };
+
+    window.addEventListener('resize', checkWindowSize);
+
     chapters.addEventListener('click', slidesToggle);
     contacts.addEventListener('click', slidesToggle);
 
-    document.querySelector('.chapters h2').addEventListener('focus', function () {
-      document.addEventListener('keydown', function (keyEvent) {
-        keyEvent.preventDefault();
-
-        if (keyEvent.code === 'Space') {
-          slidesToggle();
-        }
-      });
+    chaptersHeader.addEventListener('focus', function () {
+      if (window.innerWidth < 768) {
+        document.addEventListener('keydown', function (keyEvent) {
+          if (keyEvent.code === 'Space') {
+            slidesToggle();
+          }
+        });
+      }
     });
 
-    document.querySelector('.contacts h2').addEventListener('focus', function () {
-      document.addEventListener('keydown', function (keyEventTwo) {
-        keyEventTwo.preventDefault();
-
-        if (keyEventTwo.code === 'Space') {
-          slidesToggle();
-        }
-      });
+    contactsHeader.addEventListener('focus', function () {
+      if (window.innerWidth < 768) {
+        document.addEventListener('keydown', function (keyEventTwo) {
+          if (keyEventTwo.code === 'Space') {
+            slidesToggle();
+          }
+        });
+      }
     });
   }
 })();

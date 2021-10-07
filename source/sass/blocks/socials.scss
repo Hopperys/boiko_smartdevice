@@ -43,6 +43,9 @@
 }
 
 .socials__links {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 180px;
   margin-top: 48px;
 
   @media (max-width: $tablet) {
@@ -50,15 +53,16 @@
   }
 
   @media (max-width: $mobile) {
-    margin-top: 81px;
-    margin-left: 11px;
-    text-align: center;
+    margin-top: 82px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
   }
 }
 
 .socials__links a {
   text-decoration: none;
-  margin-right: 12px;
+  margin-right: 15px;
   vertical-align: middle;
 
   &:hover,
