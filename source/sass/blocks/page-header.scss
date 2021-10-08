@@ -1,41 +1,43 @@
 .page-header {
-  background: url("../img/background_additional.png") no-repeat, url("../img/background.png") no-repeat;
-  background-position: 1030px 118px, center;
+  background: url("../img/triangle_header.svg") no-repeat, url("../img/triangle_header_small.svg") no-repeat, url("../img/background.png") no-repeat;
+  background-position: 1064px 117px, 1030px 380px, center;
   background-color: $dark-blue;
-  background-size: auto, cover;
+  background-size: 636px, 373px, cover;
 
   @media (min-resolution: 2dppx) {
-    background: url("../img/background_additional@2x.png") no-repeat, url("../img/background@2x.png") no-repeat;
+    background: url("../img/triangle_header.svg") no-repeat, url("../img/triangle_header_small.svg") no-repeat, url("../img/background@2x.png") no-repeat;
     background-color: $dark-blue;
-    background-size: 713px, cover;
-    background-position: 1030px 118px, center;
+    background-size: 636px, 373px, cover;
+    background-position: 1064px 117px, 1030px 380px, center;
   }
 
   @media (max-width: $tablet) {
-    background: url("../img/background_additional_tablet.png") no-repeat, url("../img/background.png") no-repeat;
-    background-position: 440px -2px, center;
+    background: url("../img/triangle_header.svg") no-repeat, url("../img/triangle_header_small.svg") no-repeat, url("../img/background.png") no-repeat;
+    background-position: 470px -40px, 440px 170px, center;
     background-color: $dark-blue;
-    background-size: auto, cover;
+    background-size: 501px, 294px, cover;
+    max-width: 100vw;
+    overflow-x: hidden;
 
     @media (min-resolution: 2dppx) {
-      background: url("../img/background_additional_tablet@2x.png") no-repeat, url("../img/background@2x.png") no-repeat;
+      background: url("../img/triangle_header.svg") no-repeat, url("../img/triangle_header_small.svg") no-repeat, url("../img/background@2x.png") no-repeat;
       background-color: $dark-blue;
-      background-size: 534px, cover;
-      background-position: 440px -2px, center;
+      background-position: 470px -40px, 440px 170px, center;
+      background-size: 501px, 294px, cover;
     }
   }
 
   @media (max-width: $mobile) {
-    background: url("../img/background_additional_mobile.png") no-repeat, url("../img/background.png") no-repeat;
-    background-position: 26px -46px, center;
+    background: url("../img/triangle_header.svg") no-repeat, url("../img/triangle_header_small.svg") no-repeat, url("../img/background.png") no-repeat;
+    background-position: 179px -47px, 153px 155px, center;
     background-color: $dark-blue;
-    background-size: auto, cover;
+    background-size: 479px, 281px, cover;
 
     @media (min-resolution: 2dppx) {
-      background: url("../img/background_additional_mobile@2x.png") no-repeat, url("../img/background@2x.png") no-repeat;
+      background: url("../img/triangle_header.svg") no-repeat, url("../img/triangle_header_small.svg") no-repeat, url("../img/background@2x.png") no-repeat;
+      background-position: 179px -47px, 153px 155px, center;
       background-color: $dark-blue;
-      background-size: 630px, cover;
-      background-position: 26px -46px, center;
+      background-size: 479px, 281px, cover;
     }
   }
 }
