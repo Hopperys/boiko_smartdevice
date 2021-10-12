@@ -3,11 +3,18 @@
 }
 
 .services__wrapper {
-  margin-left: 19.55%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 30px;
   max-width: 1170px;
+
+  @media (min-width: 1921px) {
+    margin-left: 375px;
+  }
+
+  @media (max-width: 1920px) {
+    margin-left: 19.55%;
+  }
 
   @media (max-width: 1620px) {
     margin-left: 10%;
@@ -39,8 +46,15 @@
   font-weight: 400;
   color: $white;
   padding-top: 89px;
-  margin-left: 19.55%;
   margin-bottom: 51px;
+
+  @media (min-width: 1921px) {
+    margin-left: 375px;
+  }
+
+  @media (max-width: 1920px) {
+    margin-left: 19.55%;
+  }
 
   @media (max-width: 1620px) {
     margin-left: 10%;
@@ -181,6 +195,7 @@
   @media (max-width: $tablet) {
     width: 720px;
     height: 256px;
+    object-fit: cover;
   }
 
   @media (max-width: $mobile) {

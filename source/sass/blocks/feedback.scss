@@ -22,6 +22,21 @@
   }
 
   @media (max-width: 1275px) {
+    background-size: 500px, auto, auto;
+    background-position: 100px 40px, 1577px 287px, 1642px 42px;
+  }
+
+  @media (max-width: 1187px) {
+    background-size: 500px, auto, auto;
+    background-position: 0 40px, 1577px 287px, 1642px 42px;
+  }
+
+  @media (max-width: 1160px) {
+    background-size: 350px, auto, auto;
+    background-position: 50px 90px, 1577px 287px, 1642px 42px;
+  }
+
+  @media (max-width: $tablet) {
     background: $light-blue;
   }
 }
@@ -31,10 +46,17 @@
   line-height: 51px;
   padding-top: 90px;
   font-weight: 400;
-  margin: 0 0 0 50.57%;
 
-  @media (max-width: 1275px) {
-    margin-left: 25%;
+  @media (min-width: 1921px) {
+    margin: 0 0 0 975px;
+  }
+
+  @media (max-width: 1920px) {
+    margin: 0 0 0 50.57%;
+  }
+
+  @media (max-width: 1187px) {
+    margin-left: 42%;
   }
 
   @media (max-width: $tablet) {
@@ -63,11 +85,18 @@
 
 .feedback p {
   font-family: "PT Mono", "Courier New", monospace;
-  margin-left: 50.75%;
   margin-top: 10px;
 
-  @media (max-width: 1275px) {
-    margin-left: 25%;
+  @media (min-width: 1921px) {
+    margin-left: 975px;
+  }
+
+  @media (max-width: 1920px) {
+    margin-left: 50.75%;
+  }
+
+  @media (max-width: 1187px) {
+    margin-left: 42%;
   }
 
   @media (max-width: $tablet) {

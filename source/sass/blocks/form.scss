@@ -8,11 +8,18 @@
     grid-template-rows: min-content min-content 45px;
     column-gap: 30px;
     row-gap: 30px;
-    margin-left: 50.7%;
     padding-bottom: 113px;
 
-    @media (max-width: 1275px) {
-      margin-left: 25%;
+    @media (min-width: 1921px) {
+      margin-left: 975px;
+    }
+
+    @media (max-width: 1920px) {
+      margin-left: 50.7%;
+    }
+
+    @media (max-width: 1187px) {
+      margin-left: 42%;
     }
 
     @media (max-width: $tablet) {
@@ -158,14 +165,17 @@
 
 .form--popup textarea {
   width: 94%;
-  height: 89px;
+  padding-bottom: 92px;
+  height: 1px;
   margin-top: 16px;
   padding-left: 25px;
+  overflow-y: hidden;
 
   &:hover,
   &:focus {
-    width: 94.9%;
-    height: 87px;
+    width: 93.9%;
+    padding-bottom: 90px;
+    height: 1px;
   }
 }
 
@@ -323,7 +333,8 @@
 
 .form--popup .form__submit {
   width: 411px;
-  height: 47px;
+  padding-top: 15px;
+  padding-bottom: 14px;
   margin-top: 17px;
   margin-bottom: 25px;
 }

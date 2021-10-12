@@ -220,7 +220,6 @@
 }
 
 .information__additional {
-  margin-left: 29.1%;
   position: relative;
   padding-bottom: 81px;
 
@@ -236,6 +235,14 @@
     @media (min-resolution: 2dppx) {
       background: url("../img/year@2x.png");
     }
+  }
+
+  @media (min-width: 1921px) {
+    margin-left: 555px;
+  }
+
+  @media (max-width: 1920px) {
+    margin-left: 29.1%;
   }
 
   @media (max-width: 1650px) {
